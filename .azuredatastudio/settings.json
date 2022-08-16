@@ -1,0 +1,5 @@
+{
+    "dataworkspace.excludedProjects": [
+        "DatabaseProjectmy-static-db/DatabaseProjectmy-static-db.sqlproj"
+    ]
+}
