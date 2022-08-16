@@ -2,8 +2,7 @@ const sql = require('mssql')
 
 const AZURE_CONN_STRING = process.env["AzureSQLConnectionString"];
 
-module.exports = async function (context, req) {
-  console.log("DEBUG")
+module.exports = async function (context, req) {  
   const product = {
     id: undefined,
     name: req.body.name,
