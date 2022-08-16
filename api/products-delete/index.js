@@ -1,12 +1,19 @@
-const data = require('../shared/product-data');
+const sql = require('mssql')
 
-module.exports = async function (context, req) {
+const AZURE_CONN_STRING = process.env["AzureSQLConnectionString"];
+
+module.exports = async function (context, req) {  
   const id = parseInt(req.params.id, 10);
 
-  try {
-    data.deleteProduct(id);
-    context.res.status(200).json({});
+  try{
+    const pool = await sql.connect(AZURE_CONN_STRING);
+
+    const data = await pool.request()
+      .query(`
+        DELETE FROM [dbo].[products] WHERE Id = ${id}
+      `);
+            
   } catch (error) {
     context.res.status(500).send(error);
   }
-};
+}

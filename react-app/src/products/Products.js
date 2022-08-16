@@ -50,6 +50,7 @@ function Products({ history }) {
       addProduct(product);
     }
     handleCancelProduct();
+    getProducts();
   }
 
   function handleCloseModal() {
