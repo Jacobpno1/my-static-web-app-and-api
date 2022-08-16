@@ -17,6 +17,7 @@ INSERT INTO dbo.products
 VALUES
   ('Strawberries', '16oz package of fresh organic strawberries', 1),
   ('Sliced bread', 'Loaf of fresh sliced wheat bread', 1),
-  ('Apples', 'Bag of 7 fresh McIntosh apples', 1);
+  ('Apples', 'Bag of 7 fresh McIntosh apples', 1),
+  ('Cracker Jacks', 'Nasty bag of burnt caremel popcorn.', 1)
 GO
 
