@@ -7,8 +7,7 @@ module.exports = async function (context, req) {
 
 	const data = await pool.request()
 		.query("SELECT * FROM [dbo].[products]");
-	
-	console.log(data.recordset)
+		
 	context.res = {
 		body: data.recordset.map(v => ({
 			id: v.Id,
